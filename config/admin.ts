@@ -9,6 +9,12 @@ const getPreviewPathname = (uid, { locale, document }): string => {
       }
       return `/blog/${slug}`; // Individual article page
     }
+    case 'api::header.header': {
+      return '/?preview=content';
+    }
+    case 'api::content.content': {
+      return '/?preview=content';
+    }
     default: {
       return null;
     }
